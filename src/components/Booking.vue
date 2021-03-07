@@ -5,14 +5,21 @@
         <v-toolbar
           flat
         >
-          <v-btn
+          
+          <v-btn 
             outlined
-            class="mr-4"
-            color="grey darken-2"
-            @click="setToday"
+            v-if="type != 'week'"  
+            @click="type = 'week'"
           >
-            Today
+            Week
           </v-btn>
+          <v-btn 
+            outlined
+            v-if="type != 'month'"  
+            @click="type = 'month'"
+          >
+            Month
+          </v-btn>  
           <v-btn
             fab
             text
@@ -39,7 +46,6 @@
             {{ $refs.calendar.title }}
           </v-toolbar-title>
           <v-spacer></v-spacer>
-
           <v-dialog
             v-model="newEventDialog"
             width="500"
@@ -234,22 +240,7 @@
               </v-card-actions>
             </v-card>
             </template>
-          </v-dialog>
-          <v-spacer></v-spacer>
-          <v-btn 
-            outlined
-            v-if="type != 'week'"  
-            @click="type = 'week'"
-          >
-            Week
-          </v-btn>
-          <v-btn 
-            outlined
-            v-if="type != 'month'"  
-            @click="type = 'month'"
-          >
-            Month
-          </v-btn>            
+          </v-dialog>     
         </v-toolbar>
       </v-sheet>
       <v-sheet height="600">

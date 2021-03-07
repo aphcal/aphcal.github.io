@@ -15,13 +15,11 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld';
 import Booking from './components/Booking';
 export default {
   name: 'App',
 
   components: {
-    //HelloWorld,
     Booking,
   },
 
