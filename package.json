@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "firebase": "^8.2.10",
     "sass-loader": "^7.1.0",
+    "uuid": "^8.3.2",
     "vue": "^2.6.11",
+    "vuefire": "^2.2.5",
     "vuetify": "^2.4.0"
   },
   "devDependencies": {
@@ -38,7 +41,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",
